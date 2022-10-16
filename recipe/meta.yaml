@@ -1,4 +1,4 @@
-{% set version = "4021.104" %}
+{% set version = "4021.105" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/timeSeries_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/timeSeries/timeSeries_{{ version }}.tar.gz
-  sha256: f69ee98d9b47603f5ba87699074653ba51268a5a962539df497781b053520112
+  sha256: bfe36c964bb1d4b3c01d411e46081a2adaad6b4d7e04d8b3fca702a1178cdbcc
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
