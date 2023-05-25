@@ -1,11 +1,11 @@
-About r-timeseries
-==================
+About r-timeseries-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-timeseries-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.rmetrics.org
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-timeseries-feedstock/blob/main/LICENSE.txt)
 
 Summary: Provides a class and various tools for financial time series. This includes basic functions such as scaling and sorting, subsetting, mathematical operations and statistical functions.
 
