@@ -1,4 +1,4 @@
-{% set version = "4041.110" %}
+{% set version = "4041.111" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/timeSeries_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/timeSeries/timeSeries_{{ version }}.tar.gz
-  sha256: 76baa04821c4344df0f93ff9edcfe671caa1538c634789739025585fd808f2a8
+  sha256: 053d24772c0298e5979e3757c3fd7285fe6c10f31c1ead5a639dd190f6fa8a43
 
 build:
   noarch: generic
