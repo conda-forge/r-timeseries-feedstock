@@ -1,4 +1,4 @@
-{% set version = "4041.110" %}
+{% set version = "4041.111" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -7,9 +7,9 @@ package:
 
 source:
   url:
-    - https://cran.r-project.org/src/contrib/timeSeries_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/timeSeries/timeSeries_{{ version }}.tar.gz
-  sha256: 76baa04821c4344df0f93ff9edcfe671caa1538c634789739025585fd808f2a8
+    - {{ cran_mirror }}/src/contrib/timeSeries_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/timeSeries/timeSeries_{{ version }}.tar.gz
+  sha256: 053d24772c0298e5979e3757c3fd7285fe6c10f31c1ead5a639dd190f6fa8a43
 
 build:
   noarch: generic
@@ -20,16 +20,18 @@ build:
 
 requirements:
   build:
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+  host:
     - r-base
-    - r-timedate >=2150.95
-
+    - r-timedate >=4041.110
   run:
     - r-base
-    - r-timedate >=2150.95
+    - r-timedate >=4041.110
 
 test:
   commands:
-    - $R -e "library('timeSeries')"  # [not win]
+    - $R -e "library('timeSeries')"           # [not win]
     - "\"%R%\" -e \"library('timeSeries')\""  # [win]
 
 about:
